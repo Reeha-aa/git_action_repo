@@ -1,0 +1,23 @@
+name: course TDS Assignment 2  # Give your action a descriptive name
+
+on:
+  push:  # Trigger the action on every push to any branch. You can change this to pull_request or schedule etc.
+    branches:
+      - main # Or whatever branch you want to trigger on
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: reeha.shaik@straive.com  # Step name containing your email
+        run: echo "Hello, world!"
+      
+      - name: Run Python script
+        run: |
+          python --version
+          pip install -r requirements.txt
+          python app.py
