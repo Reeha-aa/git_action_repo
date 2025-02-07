@@ -18,6 +18,5 @@ jobs:
       
       - name: Run Python script
         run: |
-          python --version
           pip install -r requirements.txt
           python app.py
